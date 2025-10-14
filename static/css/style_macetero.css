@@ -1,0 +1,92 @@
+/* Navbar */
+body{
+    margin: 0;
+    min-height: 100%;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #f5fff3, #e7fde2)
+}
+
+.custom-navbar  {
+    width: auto;
+    height: 70px; /* Ajusta la altura según sea necesario */
+    font-size: 1.5rem; /* Ajusta el tamaño de la fuente según sea necesario */
+    font-weight: bold; /* Hace que el texto sea negrita */
+    color: #000; /* Cambia el color del texto según sea necesario */
+    font-family: 'Times New Roman', Times, serif; /* Cambia la fuente según sea necesario */
+    background: linear-gradient(to right, #006b0e, #00ac173d) /* Cambia el color de fondo según sea necesario */
+}
+.custom-navbar .navbar-brand {
+    color: #ffffff; /* Cambia el color del texto del enlace según sea necesario */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+}
+
+
+/* Cuadro de la maceta general */
+.cuadro-general {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid black;
+    margin-top: 50px;
+}
+/* Cuadro de la imagen de la maceta */
+.cuadro-imagen{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    border: 2px solid black;
+}
+.maceta-img {
+    width: 90%;
+    height: 70%;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}
+
+/* Cuadro de la descripcion de la maceta */
+.cuadro-descripcion {
+    border-radius: 16px;
+    border: none;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    background: linear-gradient(135deg, #f8fafc 60%, #e0ffe0 100%);
+    width: 60%;
+    height: 90%;
+    margin: 25px auto;
+    padding: 25px 24px;
+    text-align: left;
+    font-family: 'Segoe UI', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #222;
+    font-size: 1.15rem;
+    transition: box-shadow 0.3s;
+}
+
+.cuadro-descripcion:hover {
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    background: linear-gradient(135deg, #e0ffe0 60%, #f8fafc 100%);
+}
+
+
+.mapa{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+
+/* Apartado inferior de la pagina web */
+
+.footer {
+    background: linear-gradient(to right, #00490a, #00c01a8f);
+    color: #ffffff;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 200px;
+}

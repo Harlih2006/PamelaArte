@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>           
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style_index.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" /> <!--Link para AOS-->
+</head>
+
+<body>
+    <nav class="navbar bg-body-tertiary custom-navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{{ url_for('index') }}">
+                <img src="/static/img/perro.png" alt="" 
+                    class="d-inline-block-align-text-top">
+                PamelaArte
+            </a>
+            <div class="ms-auto">
+                {% if nombre_usuario %}
+                    <span class="me-3 fw-bold text-success">Hola, {{ nombre_usuario }}</span>
+                    <a href="{{ url_for('carrito') }}" class="btn btn-primary">Carrito</a>
+                    <a href="{{ url_for('logout') }}" class="btn btn-danger">Logout</a>
+                {% else %}
+                    <a href="{{ url_for('carrito') }}" class="btn btn-primary">Carrito</a>
+                    <a href="{{ url_for('login') }}" class="btn btn-primary">Login</a>
+                {% endif %}
+            </div>
+        </div>
+    </nav>
+    <!--Carrusel-->
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2500">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="/static/img/gta.png" class="carousel-img" alt="">
+            </div>
+            <div class="carousel-item">
+                <img src="/static/img/huason.png" class="carousel-img" alt="">
+            </div>
+            <div class="carousel-item">
+                <img src="/static/img/peru.png" class="carousel-img" alt="">
+            </div>
+            <!-- BOTONES PA QUE CAMBIE LA IMAGEN-->
+                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>   
+        </div>
+    </div>
+    <!--Fin del carrusel-->
+
+    <!--Contenido de filtros y macetas-->
+    <div class="filtro-maceta">
+        <!--Caja de filtros-->
+        <div data-aos="fade-right" data-aos-duration="2000" class="filtros">
+            <!--Dropdown de filtros-->
+            <a class="dropdown-item" href="#">Tipo de Maceta</a>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="checkExterior">
+                        <label class="form-check-label" for="checkExterior">Exterior</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="checkInterior">
+                        <label class="form-check-label" for="checkInterior">Interior</label>
+                    </div>
+                        <div>
+                            <input type="number" class="form-control mt-3" id="input-search" placeholder="filtrar por precio">
+                        </div>
+                    <button id="btnFiltrar" class="btn btn-success w-100 mt-2">Filtrar</button>
+            <!--Fin dropdown-->
+        </div>
+        <!--Fin caja de filtros-->
+
+        <!--Caja de Macetas-->
+        <div data-aos="fade-left" data-aos-duration="2000" class="macetas">
+            {% for maceta in macetas %}
+                <div class="maceta" data-tipo="{{ maceta.tipo }}"> 
+                    <img class="maceta_img" src="{{ url_for('static', filename=maceta.imagen) }}" alt="{{maceta.nombre}}">
+                    <p class="maceta_nom">{{ maceta.nombre }}</p>
+                    <p class="maceta_precio">${{ maceta.precio }}</p>
+                    <div class = "overlay">
+                        <a class="boton-ver-maceta" href="ver/{{maceta.id}}">Ver maceta</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>  
+        <!--Fin caja de macetas-->
+    </div>
+    <!--Fin de filtros y productos-->
+    <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+            crossorigin="anonymous"></script>
+    </body>
+    <footer class="footer">
+    <div class="container">
+        <div class="row">
+            <!-- Columna de enlaces -->
+            <div class="col-md-4 mb-3">
+                <ul class="list-unstyled">
+                    <li><a href="{{ url_for('administracion_inicio') }}">Administracion</a></li>
+                    <li><a href="#">Real Store Information</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Point Terms and Conditions</a></li>
+                </ul>
+            </div>
+            <!-- Columna de redes sociales -->
+            <div class="col-md-4 mb-3 text-md-end">
+                <a href="#" class="me-2"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="me-2"><i class="bi bi-twitter-x"></i></a>
+                <a href="#" class="me-2"><i class="bi bi-instagram"></i></a>
+            </div>
+        </div>
+        <hr>
+        <div class="text-center">
+             <a class="navbar-brand" href="{{ url_for('index') }}">
+                <img src="/static/img/perro.png" alt="" 
+                    class="d-inline-block-align-text-top">
+                PamelaArte
+            </a>
+        </div>
+    </div>
+</footer>
+    <!--Bloque de funcionamiento de libreria AOS para que elementos "aparezcan"-->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="{{ url_for('static', filename='js/script_index.js') }}"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const checkExterior = document.getElementById('checkExterior'); //Estas 2 cositas :3 chekea que la macetas que digan interior y exterior ay me siento muy onichan
+            const checkInterior = document.getElementById('checkInterior');
+            const btnFiltrar = document.getElementById('btnFiltrar'); //Lo que hace este botoncito de mierda es filtrar las macetas
+            const macetas = document.querySelectorAll('.maceta');
+
+            function filtrarMacetas() {
+                macetas.forEach(maceta => {
+                    const tipo = maceta.getAttribute('data-tipo');
+                    const mostrarExterior = checkExterior.checked && tipo === 'Exterior';
+                    const mostrarInterior = checkInterior.checked && tipo === 'Interior';
+                    if ((checkExterior.checked || checkInterior.checked) && !(mostrarExterior || mostrarInterior)) {
+                        maceta.style.display = 'none';
+                    } else {
+                        maceta.style.display = '';
+                    }
+                });
+            }
+        });
+
+
+        document.getElementById('input-search').addEventListener('input', ajustePrecio); // Agarra el objeto input-search, despues se ejecuta cuando de hace un input(cambiar lo que tiene escrito), la funcion que se ejecuta es onInputChange
+        function ajustePrecio(event) {
+            const searchTerm = parseInt(event.target.value.toLowerCase()); // Obtiene el valor del objeto que ejecuto la funcion y lo pasa a int
+            const macetas = document.querySelectorAll('.maceta'); // Obtener los objetos de clase maceta
+            macetas.forEach(maceta => { // Funcion flecha que recorre todas las macetas
+                const precio = parseInt(maceta.querySelector('.maceta_precio').textContent.replace('$', ''));
+                if (precio <= searchTerm || isNaN(searchTerm)) {
+                    maceta.style.display = '';
+                } else {
+                    maceta.style.display = 'none';
+                }
+            });
+        }
+
+
+    </script>
+</html>

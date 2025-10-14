@@ -1,0 +1,102 @@
+/* Trasfondo de la página */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #dcffd5, #f5fff3)
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 80vh;
+    padding-top: 50px; 
+}
+
+.login-box {
+    background: #004d00; 
+    padding: 30px;
+    border-radius: 12px;
+    width: 350px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.4);
+    text-align: center;
+    color: white;
+}
+
+.login-box h2 {
+    margin-bottom: 20px;
+}
+
+.input-group {
+    text-align: center;
+    margin-bottom: 15px;
+}
+.input-group label {
+    font-size: 14px;
+    display: block;
+    margin-bottom: 5px;
+}
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.btn-login, .btn-register {
+    
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+}
+.btn-login {
+    background: #8B0000;
+    color: white;
+}
+.btn-register {
+    background: #555;
+    color: white;
+}
+
+.custom-navbar  {
+    width: auto;
+    height: 70px; /* Ajusta la altura según sea necesario */
+    font-size: 1.5rem; /* Ajusta el tamaño de la fuente según sea necesario */
+    font-weight: bold; /* Hace que el texto sea negrita */
+    color: #ffffff; /* Cambia el color del texto según sea necesario */
+    font-family: 'Times New Roman', Times, serif; /* Cambia la fuente según sea necesario */
+    background: linear-gradient(to right, #006b0e, #00ac173d) /* Cambia el color de fondo según sea necesario */
+}
+
+.custom-navbar .navbar-brand {
+    color: #ffffff; /* Cambia el color del texto del enlace según sea necesario */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+}
+
+.bg-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.footer {
+    background: linear-gradient(to right, #00490a, #00c01a8f); 
+    color: #ffffff;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: auto;
+}
+    

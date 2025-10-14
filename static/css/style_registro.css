@@ -1,0 +1,43 @@
+/* Cuerpo de la pagina */
+body {
+    background: linear-gradient(to right, #f5fff3, #e7fde2)
+}
+
+/* Navbar */
+.custom-navbar  {
+    width: auto;
+    height: 70px; /* Ajusta la altura según sea necesario */
+    font-size: 1.5rem; /* Ajusta el tamaño de la fuente según sea necesario */
+    font-weight: bold; /* Hace que el texto sea negrita */
+    color: #ffffff; /* Cambia el color del texto según sea necesario */
+    font-family: 'Times New Roman', Times, serif; /* Cambia la fuente según sea necesario */
+    background: linear-gradient(to right, #006b0e, #00ac173d) /* Cambia el color de fondo según sea necesario */
+}
+
+.custom-navbar .navbar-brand {
+    color: #ffffff; /* Cambia el color del texto del enlace según sea necesario */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+}
+
+/* Para una imagen que este detras de la pagina */
+.bg-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+
+/* Footer de la pagina */
+.footer {
+    background: linear-gradient(to right, #00490a, #00c01a8f); 
+    color: #ffffff;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 200px;
+}
+    

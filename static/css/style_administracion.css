@@ -1,0 +1,85 @@
+body{
+    margin: 0;
+    min-height: 100%;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background-color: rgba(53, 53, 53, 0.996);
+}
+
+.custom-navbar  {
+    width: auto;    
+    height: 70px; /* Ajusta la altura según sea necesario */
+    font-size: 1.5rem; /* Ajusta el tamaño de la fuente según sea necesario */
+    font-weight: bold; /* Hace que el texto sea negrita */
+    color: rgb(255, 255, 255); /* Cambia el color del texto según sea necesario */
+    font-family: 'Times New Roman', Times, serif; /* Cambia la fuente según sea necesario */
+    background: linear-gradient(to right, #006b0e, #00ac173d) /* Cambia el color de fondo según sea necesario */
+}
+
+.admin-container {
+    max-width: 950px;
+    margin: 48px auto;
+    background: rgba(53, 53, 53, 0.996);
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgb(61, 200, 7), 0 2px 8px rgba(0, 0, 0, 0.08);
+    padding: 40px 32px 32px 32px;
+    border: 2px solid #2fa800;
+    text-align: center;
+    color: #2fa800; 
+}
+
+/* Botón para agregar una maceta nueva */
+.agregar-maceta {
+    text-align: center;
+    display: inline-block;
+    padding: 10px 24px;
+    background: linear-gradient(90deg, #009e3c 60%, #00c86b 100%);
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.agregar-maceta:hover {
+    background: linear-gradient(90deg, #00c86b 60%, #009e3c 100%);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+    transform: translateY(-2px) scale(1.04);
+}
+
+.table-container {
+    overflow-x: auto;
+    max-width: 1450px;
+    margin: 70px auto;
+    background: #7dd759;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(56, 56, 56, 0.1), 0 2px 8px rgba(0, 0, 0, 0.08);
+    padding: 60px 50px 50px 32px;
+    border: 2px solid #54c826;
+    text-align: center; 
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.table-container table {
+  border-collapse: separate;  /* Muy importante: desactiva el colapso de bordes */
+  border-spacing: 0 10px;     /* 10px = espacio vertical entre filas */
+  width: 100%;
+}
+
+.table-container tr {
+  background-color: #31a702;     /* Color del fondo de las filas */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Pequeña sombra opcional */
+}
+
+.table-container th, 
+.table-container td,
+.table-container th     {
+  padding: 12px;
+  text-align: center;
+}

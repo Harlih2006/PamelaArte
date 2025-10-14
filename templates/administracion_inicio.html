@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style_administracion_inicio.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" /> <!--Link para AOS-->
+    <title>Inicio de sesión admin</title>
+</head>
+<body>
+    <nav class="navbar bg-body-tertiary custom-navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <img src="/static/img/perro.png" alt="" class="d-inline-block-align-text-top">
+                PamelaArte
+            </a>
+        </div>
+    </nav>
+
+    <div class="admin-bg">
+        <!--Carta de inicio de sesion-->
+        <div class="admin-form-card">
+            <h2 class="mb-4 text-center">Inicie sesion de administración</h2>
+            <form action="/verificar_usuario" method="POST">
+                <div class="mb-3">
+                    <label for="rut" class="form-label">Ingrese su rut con guión y sin puntos</label>
+                    <input type="text" class="form-control" id="rut" name="rut" required>
+                </div>
+                <div class="mb-3">
+                    <label for="contraseña" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="contraseña" name="contraseña" required>
+                </div>
+                <button type="submit" class="btn btn-success w-100">Iniciar sesión</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

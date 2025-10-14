@@ -1,0 +1,209 @@
+body{
+    margin: 0;
+    min-height: 100%;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #f5fff3, #e7fde2)
+}
+
+.carousel-slide {
+    width: 80%; /* Ajusta este valor según el tamaño deseado */
+    height: 100px; /* Ajusta este valor según el tamaño deseado */ /* Asegura que las imágenes llenen el contenedor sin distorsión */
+    margin-right: 40px ;
+    margin-left: 40px; 
+    margin-top: 50px;
+    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor sin distorsión */
+    border: 2px solid black;/* Centra el carrusel horizontalmente */
+}
+.carousel-inner {
+    margin-top: 50px;
+    width: 100%;
+    height: 400px; /* Asegura que las imágenes llenen el contenedor */
+    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor sin distorsión */
+    
+}
+.carousel-img {
+    width: 100%;
+    height: auto;
+    object-fit: fill; /* Usa 'cover' para recortar, 'contain' para mostrar todo */
+    margin: 0 auto;
+    display: block;
+}
+.custom-navbar  {
+    width: auto;
+    height: 70px; /* Ajusta la altura según sea necesario */
+    font-size: 1.5rem; /* Ajusta el tamaño de la fuente según sea necesario */
+    font-weight: bold; /* Hace que el texto sea negrita */
+    color: #000; /* Cambia el color del texto según sea necesario */
+    font-family: 'Times New Roman', Times, serif; /* Cambia la fuente según sea necesario */
+    background: linear-gradient(to right, #006b0e, #00ac173d) /* Cambia el color de fondo según sea necesario */
+}
+
+.custom-navbar .navbar-brand {
+    color: #ffffff; /* Cambia el color del texto del enlace según sea necesario */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+}
+
+.carousel-inner .carousel-item:nth-child(1) .carousel-img {   /* GTA */
+    width: 100%;
+    max-height: 400px;
+    object-fit: fill;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.carousel-inner .carousel-item:nth-child(2) .carousel-img {  /* HUASON */
+    width: 100%;
+    max-height: 400px;
+    object-fit: fill;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.carousel-inner .carousel-item:nth-child(3) .carousel-img {  /* PERU */
+    width: 100%;    
+    max-height: 400px;
+    object-fit: fill;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.carousel-control-prev {
+    height: 40px;
+    background-color: rgba(0, 182, 15, 0.589); 
+     
+}
+
+.carousel-control-next {
+    height: 40px;
+    background-color: rgba(0, 182, 15, 0.589);
+}
+
+.carousel-control-next{
+    width: 50px;
+    height: 400px;
+    background-color: #006b0e;
+    opacity: 1 !important;
+    filter: none !important;
+}
+
+.carousel-control-prev{
+    width: 50px;
+    height: 400px;
+    background-color: #006b0e;
+    opacity: 1 !important;
+    filter: none !important;
+}
+
+/* Caja de filtros y macetas */
+.filtro-maceta{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    padding: 20px;
+    gap: 30px;
+    border-radius: 30px;
+}
+
+/* Caja de filtros */
+.filtros {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    border: 2px solid rgb(124, 124, 124);
+    border-radius: 10px;
+}
+
+/*  apartado exclusivamente hacia las macetas  "Caja de macetas" */
+.macetas {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid rgb(129, 127, 127);
+    flex-wrap: wrap;
+    padding-left: 40px;
+    gap: 50px;;
+}
+
+/* Caja de cada maceta */
+.maceta {
+    width: 30%; /* El grid de Bootstrap controla el ancho */
+    height: auto;
+    border: 2px solid black;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+.maceta:hover {
+    box-shadow: 0 8px 24px rgba(0, 158, 60, 0.18), 0 2px 8px rgba(0,0,0,0.10);
+    transform: translateY(-6px) scale(1.03);
+    border-color: #00c86b;
+    background: linear-gradient(120deg, #eafff2 60%, #c6ffe0 100%);
+}
+
+/* Imagen maceta */
+.maceta_img {
+    width: 33%;
+    height: 100px;  
+    border-radius: 5px;
+}
+
+/* Nombre maceta */
+.maceta_nom {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.overlay {
+    margin-top: 10px;
+    display: grid;
+    flex-direction: column;
+    gap: 8px;
+    background: none;
+    transition: opacity 0.3s ease;
+}
+
+/* Botón para ver maceta */
+.boton-ver-maceta {
+    text-align: center;
+    display: inline-block;
+    padding: 10px 24px;
+    background: linear-gradient(90deg, #009e3c 60%, #00c86b 100%);
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.boton-ver-maceta:hover {
+    background: linear-gradient(90deg, #00c86b 60%, #009e3c 100%);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+    transform: translateY(-2px) scale(1.04);
+}
+
+/* Apartado inferior de la pagina web */
+.footer {
+    background-color: #006b0e; 
+    color: #ffffff;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: auto;
+    background: linear-gradient(to right, #00490a, #00c01a8f)
+}
+
+/* Porque ctm hay un carrusel al final de esta wea desordenados qlos */
+
+
+

@@ -1,0 +1,131 @@
+/* Trasfondo de la página */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #00c01a8f, #f5fff3)
+}
+
+
+/* Cuadro donde esta lo del carrito */
+.carrito-container {
+    max-width: 950px;
+    margin: 48px auto;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(0,158,60,0.10), 0 2px 8px rgba(0,0,0,0.08);
+    padding: 40px 32px 32px 32px;
+    border: 2px solid #00c86b;
+}
+
+/* Botón para volver al index */
+.boton-volver {
+    display: inline-block;
+    padding: 10px 28px;
+    background: linear-gradient(90deg, #009e3c 60%, #00c86b 100%);
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 18px;
+}
+.boton-volver:hover {
+    background: linear-gradient(90deg, #00c86b 60%, #009e3c 100%);
+    box-shadow: 0 4px 16px rgba(0,158,60,0.18);
+    transform: translateY(-2px) scale(1.04);
+}
+
+/* Titulo de tu carrito */
+h1 {
+    text-align: center;
+    color: #009e3c;
+    margin-bottom: 36px;
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.custom-navbar  {
+    width: auto;
+    height: 70px; /* Ajusta la altura según sea necesario */
+    font-size: 1.5rem; /* Ajusta el tamaño de la fuente según sea necesario */
+    font-weight: bold; /* Hace que el texto sea negrita */
+    color: #000; /* Cambia el color del texto según sea necesario */
+    font-family: 'Times New Roman', Times, serif; /* Cambia la fuente según sea necesario */
+    background: linear-gradient(to right, #006b0e, #00ac173d) /* Cambia el color de fondo según sea necesario */
+}
+
+.custom-navbar .navbar-brand {
+    color: #ffffff; /* Cambia el color del texto del enlace según sea necesario */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+}
+
+/* Contenedor de la tabla entera */
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #f8fff8;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,158,60,0.08);
+}
+
+/* Parte de los titulos y los productos */
+.table th, .table td {
+    padding: 18px 14px;
+    text-align: left;
+    border-bottom: 1px solid #e0f7e9;
+    font-size: 1.08rem;
+}
+
+/* Parte solo de los titulos */
+.table th {
+    background: #eafff2;
+    color: #009e3c;
+    font-weight: 700;
+    border-bottom: 2px solid #00c86b;
+}
+
+/* Imagen del producto */
+.table td img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,158,60,0.10);
+    background: #fff;
+    border: 1px solid #e0f7e9;
+}
+
+/* Botón para eliminar */
+.btn-danger, .btn-eliminar {
+    background: linear-gradient(90deg, #e74c3c 60%, #c0392b 100%);
+    color: #fff;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+    box-shadow: 0 2px 8px rgba(231,76,60,0.10);
+}
+
+.btn-danger:hover, .btn-eliminar:hover {
+    background: linear-gradient(90deg, #c0392b 60%, #e74c3c 100%);
+    box-shadow: 0 4px 16px rgba(231,76,60,0.18);
+    transform: translateY(-2px) scale(1.04);
+}
+
+p {
+    text-align: center;
+    color: #666;
+    font-size: 1.1rem;
+    margin-top: 32px;
+}

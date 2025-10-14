@@ -1,0 +1,11 @@
+.flash-container {
+  position: fixed;
+  top: 20px;   /* distancia desde arriba */
+  right: 20px; /* distancia desde la derecha */
+  z-index: 9999; /* para que quede encima de todo */
+}
+.flash-message {
+  min-width: 250px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
